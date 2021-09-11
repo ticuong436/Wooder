@@ -1,0 +1,36 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+}
+
+//button
+.btnmain {
+    border: 2px solid $white-cl;
+    padding: 10px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $white-cl;
+    text-transform: uppercase;
+    @include transition(0.4s);
+    text-decoration: none;
+    flex-direction: row;
+    i {
+        display: block;
+        position: relative;
+        margin-left: 5px;
+
+        right: 0;
+        @include transition($t);
+    }
+
+    &:hover {
+        background-color: #bea67c;
+        @include transition(0.4s);
+        i {
+            margin-left: 10px;
+            right: -10px;
+            @include transition($t);
+        }
+    }
+}

@@ -1,0 +1,88 @@
+// css components
+.textbox {
+    padding-left: 100px;
+    --wBefore: 80px;
+    width: 50%;
+    &.--about {
+        width: 50%;
+    }
+    
+
+    .title {
+        font-size: 30px;
+        letter-spacing: 4px;
+        font-family: pb;
+        position: relative;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        &:before {
+            content: "";
+            width: var(--wBefore);
+            height: 2px;
+            background: #cccccc;
+            display: inline-block;
+            position: relative;
+            margin-left: -80px;
+            left: -20px;
+        }
+    }
+    .des {
+        font-family: pr;
+        padding: 20px 0 40px 0;
+        color: $gray-cl;
+        &-white {
+            color: $white-cl;
+            margin-bottom: 40px;
+        }
+    }
+    .btn {
+        text-decoration: none;
+        color: #000000;
+        font-family: pb;
+        display: inline-flex;
+        letter-spacing: 3px;
+        line-height: 20px;
+        position: relative;
+        @include transition(0.4s);
+
+        &:before {
+            content: "";
+            width: 35px;
+            height: 2px;
+            background: #bea67c;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+        }
+        img {
+            margin-left: 10px;
+            height: 20px;
+            width: 40px;
+            position: relative;
+            @include transform(translateX(0px));
+            @include transition(0.4s);
+        }
+        &:hover {
+            img {
+                @include transform(translateX(10px));
+                @include transition(0.4s);
+            }
+        }
+    }
+    @include md {
+        padding-right: 0px;
+        padding-left: 20px;
+        padding-top: 20px;
+        .title {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    @include xs{
+        
+    }
+    
+}
